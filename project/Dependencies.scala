@@ -53,6 +53,8 @@ object Dependencies {
     //"org.tpolecat" %% "doobie-scalatest" % "0.9.0" % "test"
   ).map(_ % doobieVersion)
 
+  val gatling = List("ru.tinkoff" %% "gatling-picatinny" % "0.6.0")
+
   val monix = List("io.monix" %% "monix").map(_ % monixVersion)
   val tapir =
     List(
