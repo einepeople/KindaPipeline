@@ -9,6 +9,21 @@
       <option name="postfixOps" value="true" />
       <option name="higherKinds" value="true" />
     </profile>
+    <profile name="sbt 4" modules="GatlingLoadTest">
+      <option name="postfixOps" value="true" />
+      <option name="higherKinds" value="true" />
+      <option name="deprecationWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-encoding" />
+        <parameter value="UTF-8" />
+        <parameter value="-Xfatal-warnings" />
+      </parameters>
+      <plugins>
+        <plugin path="C:\Users\Aine\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\com\olegpy\better-monadic-for_2.12\0.3.1\better-monadic-for_2.12-0.3.1.jar" />
+        <plugin path="C:\Users\Aine\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\typelevel\kind-projector_2.12.12\0.11.0\kind-projector_2.12.12-0.11.0.jar" />
+      </plugins>
+    </profile>
     <profile name="sbt 5" modules="RestAccessService,SourceWebService,ValidationService,dbSinkService">
       <option name="postfixOps" value="true" />
       <option name="higherKinds" value="true" />

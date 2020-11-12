@@ -11,7 +11,7 @@ import cats.implicits._
 import org.http4s.server.Router
 import org.http4s.implicits._
 
-class WebServer[F[+_]](
+class WebServer[F[_]](
   implicit pa: PutAlgebra[F],
   da: DeleteAlgebra[F],
   M: Monad[F],

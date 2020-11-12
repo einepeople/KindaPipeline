@@ -2,6 +2,7 @@ import sbt._
 import sbt.Keys.{scalaVersion, scalacOptions, version}
 
 object Dependencies {
+  //move to Object for ScalaSteward?
   private val typedSchemaVersion = "0.12.7"
   private val fs2Version = "2.4.4"
   private val fs2KafkaVersion = "1.1.0"
@@ -12,6 +13,7 @@ object Dependencies {
   private val circeVersion = "0.12.3"
   private val tofuVersion = "0.8.0"
   private val kafkaVersion = "2.6.0"
+  private val scalaTestVersion = "3.2.2"
 
   lazy val commonSettings =
     Seq(
@@ -56,6 +58,13 @@ object Dependencies {
   val gatling = List("ru.tinkoff" %% "gatling-picatinny" % "0.6.0")
 
   val monix = List("io.monix" %% "monix").map(_ % monixVersion)
+
+  val scalaTest =
+    List("org.scalatest" %% "scalatest")
+      .map(_ % scalaTestVersion) ++
+      List("org.scalatest" %% "scalatest")
+        .map(_ % scalaTestVersion % "test")
+
   val tapir =
     List(
       "com.softwaremill.sttp.tapir" %% "tapir-core",
