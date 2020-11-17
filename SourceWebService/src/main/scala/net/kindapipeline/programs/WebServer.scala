@@ -21,7 +21,7 @@ class WebServer[F[_]](
   def httpApp: HttpApp[F] = {
     val routes = putEndpoint.toRoutes { rq =>
       (pa putResource rq) fmap { res => (res, StatusCode(res.status)).asRight[Unit] }
-    } <+> deleteEndpoint.toRoutes { rq => (da delete rq) fmap { _.asRight[Unit] } }
+    } <+> deleteEndpoint.toRoutes { rq => (da delete rq) fmap { res => (res, StatusCode(res.status)).asRight[Unit] } }
     Router("/" -> routes).orNotFound
   }
 

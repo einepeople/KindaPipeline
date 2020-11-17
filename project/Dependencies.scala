@@ -74,12 +74,14 @@ object Dependencies {
   val http4s = List(
     "org.http4s" %% "http4s-dsl",
     "org.http4s" %% "http4s-blaze-server",
-    "org.http4s" %% "http4s-blaze-client"
+    "org.http4s" %% "http4s-blaze-client",
+    "org.http4s" %% "http4s-circe"
   ).map(_ % http4sVersion)
 
   val circe = List(
     "io.circe" %% "circe-core",
     "io.circe" %% "circe-generic",
-    "io.circe" %% "circe-parser"
+    "io.circe" %% "circe-parser",
+    "io.circe" %% "circe-literal"
   ).map(_ % circeVersion)
 }

@@ -24,5 +24,5 @@ object Routes {
 
   val deleteEndpoint = baseEndpoint.delete
     .mapInTo(DeleteRequest)
-    .out(statusCode(NoContent))
+    .out(statusCode)
 }
